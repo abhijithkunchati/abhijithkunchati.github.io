@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-    fetch('https://api.github.com/repos/abhijithkunchati/abhijithkunchati.github.io/contents/')
+    fetch('https://api.github.com/repos/abhijithkunchati/abhijithkunchati.github.io/contents/resume')
         .then(response => response.json())
         .then(data => {
             const latestResume = data.find(file => file.type === 'file' && file.name.endsWith('.pdf')).name;
             window.location.href = latestResume;
         })
         .catch(error => console.error('Error fetching resume filename:', error));
-        // window.location.href = "resume_file_name.pdf"; // Replace 'resume_file_name.pdf' with the actual filename of your resume
     </script>
 </head>
 <body>
-    <!-- Optional: You can add a message for users before redirecting -->
-    <p>404 Not Found. You can view my resume <a href="/resume">here.</a>.</p>
+    <p>404 Not Found. You can contact me at abhijithkunchati@gmail.com</p>
 </body>
 </html>
