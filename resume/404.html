@@ -10,7 +10,7 @@
         .then(response => response.json())
         .then(data => {
             const latestResume = data.find(file => file.type === 'file' && file.name.endsWith('.pdf')).name;
-            window.location.href = latestResume;
+            window.location.href = window.origin+"/resume/"+latestResume;
         })
         .catch(error => console.error('Error fetching resume filename:', error));
     </script>
