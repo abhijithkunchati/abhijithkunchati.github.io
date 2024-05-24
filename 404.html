@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <script>
-    fetch('https://api.github.com/repos/abhijithkunchati/abhijithkunchati.github.io/contents/')
-        .then(response => response.json())
-        .then(data => {
-            const latestResume = data.find(file => file.type === 'file' && file.name.endsWith('.pdf')).name;
-            window.location.href = latestResume;
-        })
-        .catch(error => console.error('Error fetching resume filename:', error));
-        // window.location.href = "resume_file_name.pdf"; // Replace 'resume_file_name.pdf' with the actual filename of your resume
-    </script>
 </head>
 <body>
-    <!-- Optional: You can add a message for users before redirecting -->
-    <p>If you are not redirected, <a href="resume_file_name.pdf">click here</a>.</p>
+    <p id="countdown">404 Not Found. You will be redirected to my <a href="/resume">resume</a> in <span id="timer">5</span> seconds.</p>
+
+    <script>
+        // Function to redirect after countdown
+        function redirectAfterCountdown() {
+            var countdownElement = document.getElementById('timer');
+            var count = parseInt(countdownElement.textContent);
+            if (count === 0) {
+                window.location.href = "/resume"; 
+            } else {
+                countdownElement.textContent = count - 1;
+                setTimeout(redirectAfterCountdown, 1000);
+            }
+        }
+
+        // Start countdown
+        setTimeout(redirectAfterCountdown, 1000);
+    </script>
 </body>
 </html>
