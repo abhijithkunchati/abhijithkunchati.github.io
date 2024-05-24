@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-    fetch('https://api.github.com/repos/username/repository/contents/subdirectory')
+    fetch('https://api.github.com/repos/abhijithkunchati/abhijithkunchati.github.io/contents/')
         .then(response => response.json())
         .then(data => {
             const latestResume = data.find(file => file.type === 'file' && file.name.endsWith('.pdf')).name;
