@@ -33,6 +33,8 @@ const getLinkedin = () =>{
         `<p class="result redirectresultLinkedin">${data[language].redirectLinkedin}</p>`);
   const a = document.createElement("a");
   a.href = window.rawdata.linkedInUrl;
+  a href="intent://linkedin.com/in/abhijithkunchati#Intent;package=com.linkedin.android;scheme=https;end";
+
   a.setAttribute("target", "blank");
   a.click();
 }
