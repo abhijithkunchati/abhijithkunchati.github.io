@@ -2,36 +2,36 @@ const themes = () =>{
   if (secret === 0){
     terminal.insertAdjacentHTML("beforeend", 
     `<p class="result">
-      <ul>
-        <li>Voici la liste des <code>themes</code> disponibles :</li>
+    <ul>
+        <li>Here is the list of available themes:</li>
         <ol>
-          <li>dracula</li>
-          <li>dark</li>
-          <li>ubuntu</li>
-          <li>medallion</li>
+            <li>dracula</li>
+            <li>dark</li>
+            <li>ubuntu</li>
+            <li>medallion</li>
         </ol>
-      </ul><br>
-      <p class="result">Vous pouvez choisir un theme en écrivant dans la commande le nom de votre theme ou le numero de ce dernier. Validez ensuite votre commande en appuyant sur <em>Entrer</em></p><br>
-      <p class="result">/!\\ pour revenir sur le menu principal veuillez utiliser la commande <code>exit</code>.</p>
-    </p>`);
+    </ul><br>
+    <p class="result">You can choose a theme by typing its name or its number in the command. Then, confirm your command by pressing <em>Enter</em>.</p><br>
+    <p class="result">/!\\ To return to the main menu, please use the command <code>exit</code>.</p>
+</p>`);
   } else {
     terminal.insertAdjacentHTML("beforeend", 
     `<p class="result">
-      <ul>
-        <li>Voici la liste des <code>themes</code> disponibles :</li>
+    <ul>
+        <li>Here is the list of available themes:</li>
         <ol>
-          <li>dracula</li>
-          <li>dark</li>
-          <li>ubuntu</li>
-          <li>medallion</li>
-          <p class="linealign">secrets :<p>
-          <li>matrix</li>
-          <li>hello kitty</li>
+            <li>dracula</li>
+            <li>dark</li>
+            <li>ubuntu</li>
+            <li>medallion</li>
+            <p class="linealign">secrets :</p>
+            <li>matrix</li>
+            <li>hello kitty</li>
         </ol>
-      </ul><br>
-      <p class="result">Vous pouvez choisir un theme en écrivant dans la commande le nom de votre theme ou le numero de ce dernier. Validez ensuite votre commande en appuyant sur <em>Entrer</em></p><br>
-      <p class="result">/!\\ pour revenir sur le menu principal veuillez utiliser la commande <code>exit</code>.</p>
-    </p>`);
+    </ul><br>
+    <p class="result">You can choose a theme by typing its name or its number in the command. Then, confirm your command by pressing <em>Enter</em>.</p><br>
+    <p class="result">/!\\ To return to the main menu, please use the command <code>exit</code>.</p>
+</p>`);
   }
   
 };
@@ -40,13 +40,13 @@ const check = () =>{
   if (numberTheme === theme){
     terminal.insertAdjacentHTML("beforeend", 
         `<p class="result">
-          Votre terminal est deja sous le theme <code>${nameTheme}</code>. 
-        </p>`);
+        Your terminal is already using the <code>${nameTheme}</code> theme.
+    </p>`);
   } else {
     terminal.insertAdjacentHTML("beforeend", 
         `<p class="result">
-          Votre terminal est désormais sous le theme <code>${nameTheme}</code>. 
-        </p>`);
+        Your terminal is now using the <code>${nameTheme}</code> theme.
+    </p>`);
     theme = numberTheme;
   }
 }
@@ -56,13 +56,13 @@ const secrets = () =>{
     localStorage.setItem(secret, 1);
     terminal.insertAdjacentHTML("beforeend", 
         `<p class="result">
-          Vous avez activez des themes supplementaires ! Utilisez le commande <code>themes</code> pour voir vos nouveaux themes. 
+          You have unlocked additional themes! Use the command <code>themes</code> to see your new themes.
         </p>`);
         secret = 1;
   } else {
     terminal.insertAdjacentHTML("beforeend", 
         `<p class="result">
-          Les themes secrets sont deja actifs. Utilisez le commande <code>themes</code> pour voir vos themes. 
+        The secret themes are already active. Use the command <code>themes</code> to view your themes.
         </p>`);
   }
 }

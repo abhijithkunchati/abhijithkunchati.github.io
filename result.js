@@ -23,7 +23,7 @@ const getCv = () =>{
         `<p class="result cvresult">${data[language].cv}</p>`);
   const a = document.createElement("a");
   a.href = window.rawdata.resumeLocation;
-  // a.setAttribute("download", window.rawdata.resumeName);
+  a.setAttribute("download", window.rawdata.resumeName);
   a.setAttribute("target", "blank");
   a.click();
 }

@@ -20,8 +20,10 @@
             var countdownElement = document.getElementById('timer');
             var count = parseInt(countdownElement.textContent);
             if (count === 0) {
-                if(latestResume)
-                window.location.href = window.origin+"/resume/"+latestResume; 
+                if(latestResume){
+                    if(window.origin != null && window.origin != "" ) window.location.href = window.origin+ "/resume/"+latestResume; 
+                    else window.location.href = "/resume/"+latestResume; 
+                }
                 else
                 document.getElementById('countdown').innerHTML = "Resume not found. You can contact me at linkedIn <a href='https://www.linkedin.com/in/abhijithkunchati'>here</a>";
             } else {

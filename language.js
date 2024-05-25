@@ -39,7 +39,7 @@ var rawdata =
       }
     ]
   }
-, resumeLocation : "https://drive.google.com/uc?export=download&id=1JrpqPxkxo9TQWru0mNq0h1rtdL2S0bQU"
+, resumeLocation : "/resume/"
 }
 var data = {
   "english":
