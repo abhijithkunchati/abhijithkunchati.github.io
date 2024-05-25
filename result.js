@@ -50,14 +50,15 @@ const getLinkedin = () =>{
             appInstalled = true;
         } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
             // For iOS
-            
-            var appUrl = 'linkedin://abhijithkunchati';
+
+            var appUrl = 'linkedin://profile/view?id=abhijithkunchati';
             var fallbackUrl = 'https://www.linkedin.com/in/abhijithkunchati';
-            // var startTime = Date.now();
-            // setTimeout(function() {
-            //     if (Date.now() - startTime < 2000) return;
-            //     window.location.href = fallbackUrl;
-            // }, 1500);
+            var startTime = Date.now();
+            setTimeout(function() {
+                if (Date.now() - startTime < 1000){
+                  window.open('https://www.linkedin.com/in/abhijithkunchati', '_blank');
+                }
+            }, 1500);
             window.location.href = appUrl;
             appInstalled = true;
         }
