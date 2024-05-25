@@ -32,10 +32,40 @@ const getLinkedin = () =>{
   terminal.insertAdjacentHTML("beforeend", 
         `<p class="result redirectresultLinkedin">${data[language].redirectLinkedin}</p>`);
   const a = document.createElement("a");
-  a.href = window.rawdata.linkedInUrl;
-  a.href="intent://linkedin.com/in/abhijithkunchati#Intent;package=com.linkedin.android;scheme=https;end";
-  a.setAttribute("target", "blank");
-  a.click();
+  // a.href = window.rawdata.linkedInUrl;
+  // a.href="intent://linkedin.com/in/abhijithkunchati#Intent;package=com.linkedin.android;scheme=https;end";
+  // a.setAttribute("target", "blank");
+  // a.click();
+  var appInstalled = false;
+        
+        // Check if the LinkedIn app is installed
+        if (window.navigator && window.navigator.msLaunchUri) {
+            // For Edge
+            window.navigator.msLaunchUri("linkedin://abhijithkunchati", null, function(success) {
+                appInstalled = true;
+            }, function() {});
+        } else if (window.Android && window.Android.launchApp) {
+            // For Android
+            window.Android.launchApp("linkedin://abhijithkunchati");
+            appInstalled = true;
+        } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+            // For iOS
+            var appUrl = 'linkedin://abhijithkunchati';
+            var fallbackUrl = 'https://www.linkedin.com/in/abhijithkunchati';
+            var startTime = Date.now();
+            setTimeout(function() {
+                if (Date.now() - startTime < 2000) return;
+                window.location.href = fallbackUrl;
+            }, 1500);
+            window.location.href = appUrl;
+            appInstalled = true;
+        }
+
+        // If app is not installed, open in browser
+        if (!appInstalled) {
+            event.preventDefault(); // Prevent default link behavior
+            window.open('https://www.linkedin.com/in/abhijithkunchati', '_blank'); // Open in a new tab
+        }
 }
 
 const getGithub = () =>{
