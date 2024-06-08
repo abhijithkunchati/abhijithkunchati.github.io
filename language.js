@@ -4,38 +4,39 @@ var rawdata =
 , githubUrl : "https://github.com/abhijithkunchati"
 , aboutMe : 
   { name : "Abhijith Kunchati"
-  , skills : "Git, React etc..."
-  , city : "Los Angeles"
+  , languages : "Haskell, PureScript, Java, Python, C++, JS"
+  , education : "Masters in Computer Science from USC"
+  , experience : "1 year at Juspay as SDE"
+  , city : "Los Angeles, USA"
   }
 , experiences : 
   [ {  Date : "June 30th - July 30th"
     , Company : "Juspay"
     , Position : "Intern"
-    , Description : "TODO"
+    , Description : "Developed a cross-platform framework to render animations in Web, Android & IOS. The framework supports GIF and Lottie animations"
     }
   , { Date : "June 30th - July 30th"
     , Company : "Juspay"
     , Position : "SDE"
-    , Description : "TODO"
+    , Description : "Did performance critical optimizations to SDK and decreased the boot-up latency from 1300 to 900 ms"
     }
   ]
 , hobbies :  
-  { todo : "TODO"
+  { sports : "Cricket, Football"
+  , Other : "Entrepreneurship, Photography, Reading Non Fiction"
   }
 , projects : 
-  { meta_data : ["Name", "Tech", "Description", "team", "github"]
+  { meta_data : ["Name", "Tech", "Description", "github"]
   , data : 
-    [ { Name : "P1"
-      , Tech : "T1"
-      , Description : "DUMMy"
-      , team : "Yes"
-      , github : "temp"
+    [ { Name : "API Rate Limiter"
+      , Tech : "Java"
+      , Description : "A highly configurable, plug and play solution for limiting on API requests"
+      , github : "<a href = 'https://github.com/abhijithkunchati/API_Rate_Limiter'>link</a>"
       }
-    , { Name : "P2"
-      , Tech : "T2"
-      , Description : "DUMMy"
-      , team : "Yes"
-      , github : "temp"
+    , { Name : "Constrained Detecting Arrays"
+      , Tech : "C++"
+      , Description : "CDA's are used in Combinatorial Interaction Testing. This is part of a research project"
+      , github : "<a href = 'https://github.com/abhijithkunchati/CDA'>link</a>"
       }
     ]
   }
