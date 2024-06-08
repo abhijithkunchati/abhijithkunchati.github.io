@@ -1,3 +1,6 @@
+console.log("%cThis is still a work in progress, please excuse if there are any bugs!", "font-family: Arial; font-size: 20px; color: blue; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);");
+
+
 window.rawdata = {name: "Abhijith Kunchati"};
 let terminal = document.getElementById("terminal");
 let i = 0;

@@ -77,24 +77,14 @@ const moveBg = (historic, result, y) =>{
   }
 }
 
-// abhi migrate
-icon.addEventListener("dblclick", function(){
+icon.addEventListener("click", function(){
+  i++;
   main.style.animation = "null";
   terminalBody.innerHTML = "";
   terminalBody.insertAdjacentHTML("afterbegin",`
 <div class="resume">
-<pre>
-
- ______   ______     ______     ______   ______   ______     __         __     ______    
-/\\  == \\ /\\  __ \\   /\\  == \\   /\\__  _\\ /\\  ___\\ /\\  __ \\   /\\ \\       /\\ \\   /\\  __ \\   
-\\ \\  _-/ \\ \\ \\/\\ \\  \\ \\  __<   \\/_/\\ \\/ \\ \\  __\\ \\ \\ \\/\\ \\  \\ \\ \\____  \\ \\ \\  \\ \\ \\/\\ \\  
- \\ \\_\\    \\ \\_____\\  \\ \\_\\ \\_\\    \\ \\_\\  \\ \\_\\    \\ \\_____\\  \\ \\_____\\  \\ \\_\\  \\ \\_____\\ 
-  \\/_/     \\/_____/   \\/_/ /_/     \\/_/   \\/_/     \\/_____/   \\/_____/   \\/_/   \\/_____/ 
-
-                                                                                   
-  
-</pre></div>
-        <div>${window.rawdata.welcome}</div>
+<pre id = "greeting"></br>HELLO AGAIN</br></br></pre></div>
+        <div>${window.data.english.welcome}</div>
         <div id="terminal">
           <div>
             <p class="commande" id="answer${i}">${window.rawdata.name}:~/portfolio$</p>

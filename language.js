@@ -45,15 +45,15 @@ var rawdata =
 var data = {
   "english":
   {
-    "greeting" : `
- ___  ___  _______   ___       ___       ________     
-|\  \|\  \|\  ___ \ |\  \     |\  \     |\   __  \    
-\ \  \\\  \ \   __/|\ \  \    \ \  \    \ \  \|\  \   
- \ \   __  \ \  \_|/_\ \  \    \ \  \    \ \  \\\  \  
-  \ \  \ \  \ \  \_|\ \ \  \____\ \  \____\ \  \\\  \ 
-   \ \__\ \__\ \_______\ \_______\ \_______\ \_______\
-    \|__|\|__|\|_______|\|_______|\|_______|\|_______|
-                                                      `,
+    "greeting" :`
+      ___  ___  _______   ___       ___       ________     
+    |\  \|\  \|\  ___ \ |\  \     |\  \     |\   __  \    
+    \ \  \\\  \ \   __/|\ \  \    \ \  \    \ \  \|\  \   
+      \ \   __  \ \  \_|/_\ \  \    \ \  \    \ \  \\\  \  
+      \ \  \ \  \ \  \_|\ \ \  \____\ \  \____\ \  \\\  \ 
+        \ \__\ \__\ \_______\ \_______\ \_______\ \_______\
+        \|__|\|__|\|_______|\|_______|\|_______|\|_______|
+        `,
     "welcome" : "Welcome to my portfolio ! To display the available commands type <code>help</code>. You can use the <em>Tab</em> key to auto-complete a command.",
 
     "information" : "This site was entirely created using <code>HTML</code>, <code>CSS</code> and <code>Javascript</code> without using any library or framework. This site contains a large number of features (hidden animations, secret themes, etc.) but also a well-hidden <code>easter egg</code> that only developers can find. Good discovery!",
@@ -190,6 +190,7 @@ var data = {
 }
 //------------------------------------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 window.rawdata = rawdata;
+window.data = data;
 var name = rawdata.aboutMe.name;
 var skills = rawdata.aboutMe.skills;
 var city = rawdata.aboutMe.city;
@@ -249,7 +250,6 @@ function setLanguage(){
   } 
   language = localStorage.getItem("language");
   welcome.innerHTML = data[language].welcome;
-  greeting.innerHTML = data[language].greeting;
   document.querySelectorAll(".helpresult").forEach(element => {
     element.innerHTML = data[language].help
   });
