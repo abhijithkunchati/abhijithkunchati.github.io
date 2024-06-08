@@ -121,7 +121,7 @@ var data = {
     <td>Writer for the Startup101 newsletter which explores the beginnings of today's great startups such as Facebook, Instagram, Google and many more.</td>
   </tr>`,
 
-  "cv" : `The resume upload will begin.`,
+  "cv" : `The resume upload will opened in a new tab.`,
 
   "redirectLinkedin" : `You will be redirected to Linkedin.`,
 
