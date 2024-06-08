@@ -10,12 +10,12 @@ var rawdata =
   , city : "Los Angeles, USA"
   }
 , experiences : 
-  [ {  Date : "June 30th - July 30th"
+  [ {  Date : "March 2022 - June 2022"
     , Company : "Juspay"
     , Position : "Intern"
     , Description : "Developed a cross-platform framework to render animations in Web, Android & IOS. The framework supports GIF and Lottie animations"
     }
-  , { Date : "June 30th - July 30th"
+  , { Date : "July 2022 - Sept 2023"
     , Company : "Juspay"
     , Position : "SDE"
     , Description : "Did performance critical optimizations to SDK and decreased the boot-up latency from 1300 to 900 ms"
