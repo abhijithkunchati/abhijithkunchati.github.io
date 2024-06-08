@@ -31,12 +31,12 @@ var rawdata =
     [ { Name : "API Rate Limiter"
       , Tech : "Java"
       , Description : "A highly configurable, plug and play solution for limiting on API requests"
-      , github : "<a href = 'https://github.com/abhijithkunchati/API_Rate_Limiter'>link</a>"
+      , github : "https://github.com/abhijithkunchati/API_Rate_Limiter"
       }
     , { Name : "Constrained Detecting Arrays"
       , Tech : "C++"
       , Description : "CDA's are used in Combinatorial Interaction Testing. This is part of a research project"
-      , github : "<a href = 'https://github.com/abhijithkunchati/CDA'>link</a>"
+      , github : "https://github.com/abhijithkunchati/CDA"
       }
     ]
   }
@@ -45,6 +45,15 @@ var rawdata =
 var data = {
   "english":
   {
+    "greeting" : `
+ ___  ___  _______   ___       ___       ________     
+|\  \|\  \|\  ___ \ |\  \     |\  \     |\   __  \    
+\ \  \\\  \ \   __/|\ \  \    \ \  \    \ \  \|\  \   
+ \ \   __  \ \  \_|/_\ \  \    \ \  \    \ \  \\\  \  
+  \ \  \ \  \ \  \_|\ \ \  \____\ \  \____\ \  \\\  \ 
+   \ \__\ \__\ \_______\ \_______\ \_______\ \_______\
+    \|__|\|__|\|_______|\|_______|\|_______|\|_______|
+                                                      `,
     "welcome" : "Welcome to my portfolio ! To display the available commands type <code>help</code>. You can use the <em>Tab</em> key to auto-complete a command.",
 
     "information" : "This site was entirely created using <code>HTML</code>, <code>CSS</code> and <code>Javascript</code> without using any library or framework. This site contains a large number of features (hidden animations, secret themes, etc.) but also a well-hidden <code>easter egg</code> that only developers can find. Good discovery!",
@@ -212,7 +221,8 @@ projectHTML += '</tr>\n';
 projectData.forEach(function (project) {
   projectHTML += '<tr>\n';
   metaData.forEach(function (item) {
-    projectHTML += '<td>' + project[item] + '</td>\n';
+    if(item === "github") projectHTML += '<td><a href="' + project[item] + '" target="_blank">link</a></td>\n';
+    else projectHTML += '<td>' + project[item] + '</td>\n';
   });
   projectHTML += '</tr>\n';
 });
@@ -226,7 +236,7 @@ data.english.experience = experienceHTML;
 
 
 //------------------------------------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+let greeting = document.getElementById("greeting");
 let welcome = document.getElementById("welcome");
 let english = document.getElementById("english");
 let language;
@@ -239,6 +249,7 @@ function setLanguage(){
   } 
   language = localStorage.getItem("language");
   welcome.innerHTML = data[language].welcome;
+  greeting.innerHTML = data[language].greeting;
   document.querySelectorAll(".helpresult").forEach(element => {
     element.innerHTML = data[language].help
   });
