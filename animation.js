@@ -83,7 +83,7 @@ icon.addEventListener("click", function(){
   terminalBody.innerHTML = "";
   terminalBody.insertAdjacentHTML("afterbegin",`
 <div class="resume">
-<pre id = "greeting"></br>HELLO AGAIN</br></br></pre></div>
+<pre id = "greeting"></br></pre></div>
         <div>${window.data.english.welcome}</div>
         <div id="terminal">
           <div>
