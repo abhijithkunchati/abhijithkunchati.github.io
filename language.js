@@ -40,7 +40,7 @@ var rawdata =
       }
     ]
   }
-, resumeLocation : "/resume/"
+, resumeLocation : "rezume.pages.dev"
 }
 var data = {
   "english":
