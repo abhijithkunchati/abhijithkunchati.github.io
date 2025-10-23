@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ partial "nav.html" . }}
+
+<div class='content'>
+    <div class='front-matter'>
+        <div class='wrap'>
+            <h1>{{ .Title }}</h1>
+            <h4>{{ .Params.subtitle }}</h4>
+            <div class='bylines'>
+                <div class='byline'>
+                    <h3>Published</h3>
+                    <p>{{ .Date.Format "January 2, 2006" }}</p>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+    <div class='wrap article'>
+        {{ .Content }}
+    </div>
+</div>
+
+
+{{ end }}

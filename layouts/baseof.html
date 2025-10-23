@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ .Site.Title }}</title>
+	<meta charset='UTF-8'>
+	<meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+	<meta name='description' content="{{ .Site.Params.defaultDescription }}">
+
+    <meta name='keywords' 
+		content="{{.Site.Params.defaultKeywords }}">
+	<meta name='author' content='Abhijith Kunchati'>
+
+	<link rel='stylesheet' type='text/css' href='/styles/main.css'/>
+    <link rel='stylesheet' type='text/css' href='/styles/blog.css'/>
+	<link rel='shortcut icon' href='/favicon.png?v=e' />
+</head>
+<body>
+    {{ block "main" . }}{{ end }}
+</body>
+</html>
