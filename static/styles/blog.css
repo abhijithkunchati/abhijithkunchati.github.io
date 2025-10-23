@@ -35,15 +35,6 @@ aside{
   transform: rotateZ(-10deg);
 }
 
-@media screen and (max-width: 700px) {
-  body {
-    margin: 0 7px;
-  }
-  aside {
-    display: none;
-  }
-}
-
 @font-face {
     font-family: 'BM_Font';
     src: url('/fonts/BM_Font.woff2') format('woff2');
@@ -261,4 +252,13 @@ html {
     border-top: #ccc;
   }
 
+  @media screen and (max-width: 700px) {
+    body {
+      margin: 0 7px;
+    }
+    aside {
+      display: none;
+    }
+  }
+  
   
