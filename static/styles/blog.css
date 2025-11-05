@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Source+Sans+Pro:wght@300;400&display=swap');
-
-@font-face {
-  font-family: 'tsui';
-  src: url('/fonts/tsui.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import "./fonts/fonts.css";
 
 
 aside{
@@ -35,16 +27,8 @@ aside{
   transform: rotateZ(-10deg);
 }
 
-@font-face {
-    font-family: 'BM_Font';
-    src: url('/fonts/BM_Font.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 html {
-    font-family: 'BM_Font', -apple-system, Helvetica, arial, sans-serif;
+    font-family: 'Berkeley Mono', -apple-system, Helvetica, arial, sans-serif;
     color: rgba(0, 0, 0, 0.8);
     line-height: 1.5em;
     -ms-text-size-adjust: 100%;
@@ -69,7 +53,7 @@ html {
   h4,
   h5,
   h6 {
-    font-family: 'BM_Font', -apple-system, Helvetica, arial, sans-serif;
+    font-family: 'Berkeley Mono', -apple-system, Helvetica, arial, sans-serif;
   }
   h1 {
     line-height: 1.2em;
@@ -114,7 +98,7 @@ html {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
   .front-matter h4 {
-    font-family: 'BM_Font', -apple-system, Helvetica, arial, sans-serif;
+    font-family: 'Berkeley Mono', -apple-system, Helvetica, arial, sans-serif;
   }
   .front-matter .bylines .byline {
     margin-right: 20px;
@@ -123,7 +107,7 @@ html {
   .front-matter .bylines .byline h3,
   .front-matter .bylines .byline p {
     margin: 0;
-    font-family: 'BM_Font', -apple-system, Helvetica, arial, sans-serif;
+    font-family: 'Berkeley Mono', -apple-system, Helvetica, arial, sans-serif;
   }
   .front-matter .bylines .byline h3 {
     font-size: 9px;

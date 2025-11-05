@@ -1,14 +1,8 @@
-@font-face {
-	font-family: 'BM_Font';
-	src: url('/fonts/BM_Font.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+@import "./fonts/fonts.css";
 
 body {
 	color: rgba(0, 0, 0, 0.8);
-	font-family: 'BM_Font', -apple-system, Helvetica, arial, sans-serif;
+	font-family: 'Berkeley Mono', -apple-system, Helvetica, arial, sans-serif;
 	font-size: 15px;
 	margin: 7px;
 	padding: 0;
@@ -33,7 +27,7 @@ h1 {
 	margin: 0 0 20px 0;
 }
 #landing ul#links li {
-	font-family: 'BM_Font', -apple-system, helvetica, arial, sans-serif;
+	font-family: 'Berkeley Mono', -apple-system, helvetica, arial, sans-serif;
 	margin-right: 25px;
 	padding-bottom: 5px;
 }
