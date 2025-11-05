@@ -1,8 +1,6 @@
 @font-face {
     font-family: "Berkeley Mono";
     src:
-        local("Berkeley Mono Bold"),
-        local("BerkeleyMono-Bold"),
         url("./berkeley-mono/BerkeleyMono-Bold.woff2") format("woff2"),
         url("./berkeley-mono/BerkeleyMono-Bold.woff") format("woff");
     font-weight: bold;
@@ -13,8 +11,6 @@
 @font-face {
     font-family: "Berkeley Mono";
     src:
-        local("Berkeley Mono Regular"),
-        local("BerkeleyMono-Regular"),
         url("./berkeley-mono/BerkeleyMono-Regular.woff2") format("woff2"),
         url("./berkeley-mono/BerkeleyMono-Regular.woff") format("woff");
     font-weight: normal;
@@ -25,8 +21,6 @@
 @font-face {
     font-family: "Berkeley Mono";
     src:
-        local("Berkeley Mono Italic"),
-        local("BerkeleyMono-Italic"),
         url("./berkeley-mono/BerkeleyMono-Italic.woff2") format("woff2"),
         url("./berkeley-mono/BerkeleyMono-Italic.woff") format("woff");
     font-weight: normal;
@@ -37,8 +31,6 @@
 @font-face {
     font-family: "Berkeley Mono";
     src:
-        local("Berkeley Mono Bold Italic"),
-        local("BerkeleyMono-BoldItalic"),
         url("./berkeley-mono/BerkeleyMono-BoldItalic.woff2") format("woff2"),
         url("./berkeley-mono/BerkeleyMono-BoldItalic.woff") format("woff");
     font-weight: bold;
